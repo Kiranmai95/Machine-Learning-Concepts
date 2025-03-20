@@ -1,0 +1,58 @@
+Confusion Matrix
+A confusion matrix is a table used to evaluate the performance of a classification model. 
+It compares the actual target values with the values predicted by the model. The matrix has four main components:
+
+True Positive (TP): The number of correct positive predictions.
+True Negative (TN): The number of correct negative predictions.
+False Positive (FP): The number of incorrect positive predictions (Type I error).
+False Negative (FN): The number of incorrect negative predictions (Type II error).
+Here is an example of a confusion matrix for a binary classification problem:
+
+                Predicted Positive	Predicted Negative
+Actual  Positive    50 (TP)	                10 (FN)
+Actual Negative	    5  (FP)	                35 (TN)
+In this example:
+There are 50 true positives (TP).
+There are 35 true negatives (TN).
+There are 5 false positives (FP).
+There are 10 false negatives (FN).
+
+We can calculate the metrics as follows:
+
+
+1. **Accuracy**: This measures the overall correctness of the model. It is the ratio of correctly predicted observations to the total observations.
+   
+   Accuracy = {TP + TN}/{TP + TN + FP + FN}
+ 
+2. **Precision**: This measures the accuracy of the positive predictions. It is the ratio of correctly predicted positive observations to the total predicted positives.
+   Precision = {TP}/{TP + FP}
+   
+3. **Recall (Sensitivity or True Positive Rate)**: This measures the ability of the model to correctly identify positive observations. It is the ratio of correctly predicted positive observations to all the observations in the actual class.
+    {Recall} = {TP}/{TP + FN}
+   
+4. **F1-Score**: This is the harmonic mean of precision and recall. It provides a balance between precision and recall.
+    {F1-Score} = 2 *{{Precision}*{Recall}}/{{Precision} + {Recall}}
+
+
+Using the example confusion matrix from earlier:
+
+|                | Predicted Positive | Predicted Negative |
+|----------------|--------------------|--------------------|
+| Actual Positive|         50         |         10         |
+| Actual Negative|         5          |         35         |
+
+We can calculate the metrics as follows:
+
+- **Accuracy**: 
+  {Accuracy} = {50 + 35}/{50 + 35 + 5 + 10} = {85}/{100} = 0.85 or 85%
+  
+
+- **Precision**: 
+  {Precision} = {50}/{50 + 5} = {50}/{55} = 0.91 or 91%
+
+- **Recall**: 
+  {Recall} = {50}/{50 + 10} = {50}/{60} = 0.83 or 83%
+
+- **F1-Score**: 
+  {F1-Score} = 2 *{0.91 * 0.83}/{0.91 + 0.83} = 2 * {0.7553}/{1.74} = 0.87 or 87\%
+  
